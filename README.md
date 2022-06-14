@@ -57,7 +57,6 @@ The market character of a Bitcoin is dependent on two variables namely- the pric
 
 ## Empirical Methology
 
-
 Seasonality is variations at specific timeframes which should be removed. The mean of the data is not around zero so it means that the data is not even stationary. So, after removing the seasonality of the data by removing the seasonal part as done for both the price and the volume as shown in Fig 4(a),(b), we would have to make the data stationary too.
            ***Purely based on the figures, we cannot determine if it is stationary or not. To apply the ARIMA model, we need to make sure that the price and the volume of the dataset are stationary or not. We can make sure by performing stationarity tests like Augmented Dickey-Fuller, Kwiatkowski-Phillip-Schmidt-Shin, ADF-GLS, and Phillip-Perron test. These tests have been performed for both these variables to check the stationarity of these variables.***
 
@@ -66,8 +65,26 @@ Seasonality is variations at specific timeframes which should be removed. The me
        The metric used to evaluate the models is RMSE which stands for Root Mean Square Error. RMSE is the square root of Mean Error (ME). Mean Error stands for the difference between the actual and the predicted values of the model. The lesser is the difference, the better the model is. Thus, the RMSE value should be lower for a model to have performed better. In this case, the ARIMA model has lesser RMSE so it outperforms the prophet model.
        
 ## FORECASTING USING ARIMA MODEL (FOR VOLUME)
+![image](https://user-images.githubusercontent.com/38343820/173665532-7cfb7e9a-75fe-404e-8d66-251e10b69955.png)
 ## RMSE: 7404.244
-## FORECASTING  USING ARIMA MODEL(FOR PRICE
+## FORECASTING  USING ARIMA MODEL(FOR PRICE)
+![image](https://user-images.githubusercontent.com/38343820/173665577-f3d37413-87df-4e63-be2f-acf64b635285.png)
 ## RMSE: 1067.921
 ## PREDICTION USING PROPHET (FOR VOLUME)  RMSE: 8495.901
+![image](https://user-images.githubusercontent.com/38343820/173665627-b507987a-253d-43c8-8764-0c9d4c7112d2.png)
 ## PREDICTION USING PROPHET (FOR PRICE) RMSE: 3988.216 
+![image](https://user-images.githubusercontent.com/38343820/173665706-743d8aa6-285c-4fba-add4-ee9b2dd8907b.png)
+
+## Results
+The study illustrates that according to the ARIMA and the Prophet models, the price of Bitcoin will go up but the volume of the bitcoin will show a downward trend. The market character of the BTC will witness a bearish trend meaning the overall market would see a downward trend. Forecasting these results, ***it would be wise to state that investing in Bitcoin would not be a suitable choice. We can say that because a bearish trend is seen when the price and the volume are showcasing a different trajectory curve in their graphs which apparently in this case they are.***
+       ***Both the models produced have proven to be not the best for forecasting the price of Bitcoin and especially the volume of the Bitcoin. The RMSE values for both are very high though are higher for predicting the Volume of Bitcoin. But the Arima model has lower RMSE for both the variables so, we can say that the ARIMA model outperforms the Prophet model. RMSE, the Root Mean Square Error should be less as that demonstrates the square root of the difference between the actual and the predicted values.***
+      The plots show 80% and 95% confidence level. The area inside the dark grey region shows an 80% confidence level and the area in the light grey region shows a  95% confidence level. The area where the confidence interval enlarges cannot be much trusted but the area where the confidence interval is narrow can be trusted. As the confidence interval enlarges, the model losses its ability to forecast.
+      The plots show both the actual and the predicted values. The black line shows the actual values while the lines in blue show the predicted values. Both, the plots show that the actual and the predicted values follow the same trend.
+
+## Conclusion 
+
+The project is responsible for predicting the price and the volume of the bitcoin data to understand the market character of Bitcoin. It accomplishes the task by using two models namely the ARIMA and the Prophet model. The purpose of this project was to analyze the market character and also find the better model among the two models presented. ***To conclude, we would say that the market shows a bearish character that means that the overall market of the bitcoin will go down even if the price increases because the volume of the bitcoin shows a downward trajectory***. A comparison was made between the two models that showed the same results in general based on the error metric RMSE. ***The error metric clearly stated that the ARIMA model outperformed the Prophet model.***
+For future works, models such as the stock to flow model created by Twitter could be researched upon. This model is considered as most accurate and is based on bitcoin scarcity and the halving events of bitcoin. The model has fairly accurately tracked the price of bitcoin in the past. The stock to flow is a number that shows how many years at the current production rate are required to achieve the current stock. The higher the number, the higher the price so the stock to flow model based on scarcity and the production rate of new bitcoin. Apart from this, models like RNN, LSTM  mainly machine learning, or deep learning models could do better as seen in many other research works. Research could also be done on finding better ARIMA models than the one presented in this project.
+
+
+
