@@ -11,3 +11,6 @@ For the ARIMA  model, the data collected for the price and volume is made statio
 ## Data Analysis:
 The data is collected from an API of the website quadln.com which mainly contains the data on Bitcoin converted into every currency. This data is collected in USD rate conversion. It has eight features namely-Date, opening price, closing price,  High and low price for the day, Volume of BTC, Volume of currency, and the Weighted Price of that particular date. The data is collected daily from October of 2011 to March of 2021. The following figure ( Fig 2)  shows few rows of the dataset sorted by date in descending order:
 
+![image](https://user-images.githubusercontent.com/38343820/173659709-8abfdcbe-d422-438d-9f64-d892318817af.png)
+
+Before we start implementing our proposed ARIMA model, we need to look at the trend of both the price and the volume of  Bitcoin (fig3). More importantly, we also need to understand all the variables in the given table to understand using what field will we try to forecast the price and the volume.
